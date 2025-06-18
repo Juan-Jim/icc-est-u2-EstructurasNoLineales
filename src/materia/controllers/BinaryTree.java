@@ -20,7 +20,6 @@ public class BinaryTree {
             return new Node(value);
         }
         if (value <= padre.getValue()) {
-           // Node newNode = insertRec(padre.getLeft(), value);
             padre.setLeft(insertRec(padre.getLeft(), value));
         } else if (value > padre.getValue()) {
             padre.setRight(insertRec(padre.getRight(), value));
@@ -64,6 +63,19 @@ public class BinaryTree {
         }
     }
 
+    public boolean findValue(int value) {
+        return findValueRec(root, value);
+    }
+
+    private boolean findValueRec(Node node, int value) {
+        if (node == null) {
+            return false;
+        }
+        if (node.getValue() == value) {
+            return true;
+        }
+        return findValueRec(node.getLeft(), value) || findValueRec(node.getRight(), value);
+    }
 
     
 }
