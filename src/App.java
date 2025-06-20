@@ -13,7 +13,7 @@ public class App {
             ab.insert(14);
             ab.insert(19);
            
-
+            /* 
             System.out.println("InOrden");
             ab.printInOrden();
             System.out.println("PosOrden");
@@ -32,8 +32,26 @@ public class App {
             } else {
                 System.out.println("No encontro el valor 77");
             }
+            */
 
-
+        System.out.println("SPeso = " + ab.getSize());
+        System.out.println("Altura es = " + ab.getHeight());
+        System.out.println("\nInOrden");
+        ab.printInOrden();
+        System.out.println("\nArbol InOrden con alturas");
+        ab.printInOrdenWithHeight();
+        System.out.println("\nArbol InOrden con factor de equilibrio");
+        ab.printInOrdenWithBalanceFactor();
+        System.out.println("\nArbol esta equilibrado = " + ab.isBalanced());
+        System.out.println("\nExiste el nodo 15 = " + ab.findValue(15));
+        System.out.println("\nAgregamos el valor = 15");
+        ab.insert(15);
+        System.out.println("Arbol esta equilibrado = " + ab.isBalanced());
+        System.out.println("\nArbol InOrden con factor de equilibrio");
+        ab.printInOrdenWithBalanceFactor();
+        System.out.println("\n");
+        ab.printUnbalancedNodes();  
+    
     }
 
     
